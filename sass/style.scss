@@ -1,0 +1,234 @@
+$header-color: #df691a;
+$header-text: #fff;
+
+$aside-color: #fafafa;
+$aside-text: #757575;
+
+$main-color: #2f4051;
+$main-text: #ebebeb;
+$main-card: #4e5d6c;
+
+$footer-color: #424242;
+$footer-text: #9e9e9e;
+
+
+html,
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    background-color: $main-color;
+}
+
+.header {
+    background-color: $header-color;
+
+    &__top-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        &__left-side {
+            &__btn {
+                color: $header-text;
+                cursor: pointer;
+                background-color: transparent;
+                outline: none;
+                border: none;
+                padding: 10px;
+            }
+
+            &__logo {
+                text-decoration: none;
+                color: $header-text;
+                font-size: 2rem;
+                font-weight: bold;
+                padding: 0 10px;
+            }
+        }
+
+        &__right-side {
+
+            &__bookmark,
+            &__search {
+                color: $header-text;
+                text-decoration: none;
+
+                & svg {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    &__bottom-row {
+        &__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0 70px;
+
+            &__item {
+                &__link {
+                    display: block;
+                    color: $header-text;
+                    text-decoration: none;
+                    padding: 20px 16px;
+                }
+
+                &__link._active {
+                    font-weight: bold;
+                    box-sizing: border-box;
+                    border-bottom: 3px solid white;
+                }
+            }
+        }
+    }
+}
+
+.main {
+    display: flex;
+    color: $main-text;
+
+    &__aside {
+        padding: 16px 16px 0;
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+        flex-shrink: 0;
+
+        &__list {
+            list-style: none;
+            margin: 0;
+            padding: 0 0 20px;
+
+            &__item {
+                padding: 2px 0;
+
+                &__link {
+                    color: $main-text;
+                }
+            }
+        }
+    }
+
+    &__section {
+        flex-grow: 1;
+
+        &__header {
+            font-size: 1.5rem;
+            margin: 24px 16px 24px 32px;
+        }
+
+        &__filters {
+            display: flex;
+            padding-left: 32px;
+            border-bottom: 1px solid #4e5d6c;
+
+            &__text {
+                padding: 13px 15px 0 0;
+                font-weight: bold;
+            }
+
+            &__list {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                &__item {
+                    &__link {
+                        display: block;
+                        color: $main-text;
+                        text-decoration: none;
+                        padding: 10px 14px;
+                    }
+
+                    &__link._active {
+                        color: $header-color;
+                        font-weight: bold;
+                        box-sizing: border-box;
+                        border-bottom: 3px solid $header-color;
+                    }
+                }
+            }
+        }
+
+        &__movies-grid {
+            display: flex;
+            flex-wrap: wrap;
+            &__movie {
+                margin: 20px 0 0 20px;
+                background-color: $main-card;
+                box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+                min-width: 208px;
+
+                &__img-link {
+                    &__img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                &__header {
+                    margin: 10px;
+                    font-weight: normal;
+
+                    &__link {
+                        font-size: 1.1rem;
+                        color: $main-text;
+                        text-decoration: none;
+                    }
+                }
+
+                &__recen {
+                    display: flex;
+
+                    &__star{
+                        color: $header-color;
+                        padding: 10px;
+                    }
+
+                    &__dvd{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+
+        &__pagination {
+            &__list {
+                display: flex;
+                list-style: none;
+                padding: 20px 20px 20px 60px;
+                margin: 0;
+                &__item{
+                    &__link {
+                        font-size: 1.3rem;
+                        color: $main-text;
+                        text-decoration: none;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+        }
+
+        &__text {
+            padding: 20px;
+        }
+    }
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px;
+    background-color: $footer-color;
+    &__left, 
+    &__right {
+        &__link {
+            color: $footer-text;
+            text-decoration: none;
+            padding-right: 20px;
+        }
+    }
+}
